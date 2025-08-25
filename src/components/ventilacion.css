@@ -1,0 +1,84 @@
+.img-ventilacion {
+  position: relative;
+  background-image: url('/assets/t9.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: white;
+}
+
+.img-ventilacion .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay negro con opacidad */
+  z-index: 1;
+}
+
+.img-ventilacion .contenido {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.img-ventilacion .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.img-ventilacion h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.img-ventilacion p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+.card-ventilacion {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card-ventilacion-contenido {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.card-ventilacion h2 {
+   font-size: 2rem; 
+  font-weight: 400;    
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.card-ventilacion  p {
+  font-size: 1.25rem;   /* Equivale a text-xl */
+  font-weight: 350;     /* Light */
+  text-align: left;
+}

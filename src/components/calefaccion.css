@@ -1,0 +1,208 @@
+.img-calefaccion {
+  position: relative;
+  background-image: url('/assets/o5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Asegura que el texto sea blanco */
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* 👉 Overlay oscuro */
+.img-calefaccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 50% opacidad negra */
+  z-index: 1;
+}
+
+/* 👉 Contenedor de texto encima del overlay */
+.img-calefaccion .contenido {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+}
+
+.img-calefaccion .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.img-calefaccion h2 {
+  font-size: 3rem;
+  font-weight: 450;
+  margin-bottom: 1rem;
+  color: white; /* Color del texto */
+}
+
+.img-calefaccion p {
+  font-weight: 300; /* Light */
+  font-size: 1.125rem; /* text-lg */
+  color: black;
+}
+
+
+
+
+.card-calefaccion {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.card-calefaccion .card-contenido {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.card-calefaccion h2 {
+  font-size: 2rem; 
+  font-weight: 400;    
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+
+.contenedor-cards-calefaccion {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 0 1rem; /* Añade un pequeño padding lateral para móviles */
+}
+
+.card-info-calefaccion {
+  background-color: #12222e;
+  color: white;
+  padding: 1.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 3500px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* 👉 Asegura que el contenido se apile verticalmente */
+  align-items: flex-start; /* 👉 Alinea todo a la izquierda */
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.card-info-calefaccion h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding-left: 3rem;
+}
+
+.card-info-calefaccion h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #b0c4d4;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+}
+
+.card-info-calefaccion p {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 3rem;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+
+/* ✅ Responsividad: ajusta texto en tablets */
+@media (max-width: 768px) {
+  .card-info-calefaccion {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .card-info-calefaccion p {
+    padding-left: 0;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Responsividad: mejora para móviles */
+@media (max-width: 480px) {
+  .card-info-calefaccion p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.cards-container-calefaccion {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Usamos 6 columnas para flexibilidad */
+  gap: 20px;
+  padding: 20px;
+}
+
+.calefaccion-card {
+  background-color: #cfdde9;
+  height: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: black;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Los dos primeros: cada uno ocupa 3/6 = 50% */
+.calefaccion-card:nth-child(1),
+.calefaccion-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+/* Los tres de abajo: cada uno ocupa 2/6 = 33.33% */
+.calefaccion-card:nth-child(3),
+.calefaccion-card:nth-child(4),
+.calefaccion-card:nth-child(5) {
+  grid-column: span 2;
+}
+
+.calefaccion-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsive: 1 por fila en móviles */
+@media (max-width: 768px) {
+  .cards-container-calefaccion {
+    grid-template-columns: 1fr;
+  }
+
+  .calefaccion-card {
+    grid-column: span 1 !important; /* Fuerza a que todos ocupen el 100% */
+    height: auto; /* Altura adaptable */
+  }
+
+}

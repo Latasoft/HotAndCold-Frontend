@@ -1,0 +1,537 @@
+
+
+
+
+/* Estilo del contenedor de productos */
+.product-container {
+  padding-top: 0px;
+  justify-content: center; 
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 2rem;
+ 
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.product-card strong {
+  font-weight: 600;
+}
+
+/* Eliminar el subrayado de los enlaces */
+.product-card a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Asegura que el color del enlace herede el color de su contenedor */
+}
+
+/* Opcional: Cambia el color del enlace al pasar el ratón (hover) */
+.product-card a:hover {
+  color: #007BFF; /* Cambia a un color cuando el ratón pasa sobre el enlace */
+}
+
+
+  /* Contenedor principal del detalle del producto */
+.product-detail {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Contenedor de la imagen del producto */
+.product-detail-left {
+  flex: 1; /* La imagen tomará el 40-50% del ancho */
+  max-width: 50%; /* Puedes ajustar este valor según el tamaño que quieras */
+}
+
+/* Imagen del producto */
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Contenedor del título y descripción */
+.product-detail-right {
+  flex: 2; /* El contenido de la derecha tomará el espacio restante */
+  max-width: 50%; /* Asegura que no ocupe más del 50% */
+}
+
+/* Título del producto */
+.product-detail-right h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Color negro para el título */
+  margin-bottom: 10px;
+}
+
+/* Descripción del producto */
+.product-detail-right p {
+  font-size: 1rem;
+  color: #666; /* Descripción con color gris suave */
+  line-height: 1.6;
+}
+
+/* Diseño responsivo: ajusta los elementos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-detail-left,
+  .product-detail-right {
+    max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  }
+}
+
+  
+
+
+
+
+
+.home-banner-calefaccion {
+  position: relative;
+  background-image: url('/assets/hh5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.home-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.home-banner-content {
+  display: flex;
+  flex-direction: row;         /* Alinea texto y logo en fila */
+  align-items: flex-start;     /* ⬅️ Alinea ambos elementos al tope (izquierda superior) */
+  gap: 2rem;                   /* Espacio entre texto y logo */
+  width: 100%;
+  max-width: 800px;
+  margin-left: 3rem;
+}
+
+.home-banner-texto h2 {
+  font-size: 4rem;
+  font-weight: 450;
+  margin-bottom: 0;
+  text-align: left;
+  color: black;
+}
+
+.home-banner-logo {
+  width: 250px;                /* Opcional: reduce un poco el tamaño si es muy grande */
+  height: auto;
+  object-fit: contain;
+  margin-top: 0.25rem;    
+  margin-right: 10rem;     /* Alineación fina si es necesario */
+}
+
+
+
+  
+  .card-custom {
+    width: 300px;
+    height: 650px;
+    min-height: 650px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+  }
+  
+  /* A partir de 768px (pantallas medianas, como tablets apaisadas) */
+  @media (min-width: 768px) {
+    .card-custom {
+      width: 400px;
+      height: 600px;
+    }
+  }
+  
+  /* A partir de 1024px (pantallas grandes como laptops) */
+  @media (min-width: 1024px) {
+    .card-custom {
+      width: 400px;
+    }
+  }
+  
+  /* A partir de 1280px (pantallas aún más grandes) */
+  @media (min-width: 1280px) {
+    .card-custom {
+      width: 350px;
+      height: 600px;
+    }
+  }
+   /* A partir de 1280px (pantallas aún más grandes) */
+   @media (min-width: 1900px) {
+    .card-custom {
+      width: 550px;
+      height: 600px;
+    }
+  }
+  
+
+
+ /* Estilo base para la sección de categorías */
+ .categorias-container {
+  background-color: #e6b09c7d;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto)); /* Ocupa todo el ancho pero con tarjetas agrupadas */
+  gap: 1.5rem;
+  min-height: 500px;
+  width: 100%;
+  place-content: center; /* Centra las tarjetas dentro del grid */
+}
+
+
+
+
+/* Estilo para cada tarjeta de categoría */
+.categoria-card {
+  text-align: center;
+  min-height: 380px;
+  overflow: hidden; /* Evita el desbordamiento del contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Reduce el espacio entre el título y las imágenes */
+}
+
+/* Estilo para los títulos */
+.categoria-title {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.5rem; /* Reduce el espacio entre el título y las imágenes */
+  margin-top: 0.5rem; /* Reduce el espacio entre el título y el borde superior */
+  font-size: 1rem; /* Tamaño de fuente más grande */
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Permite el salto de línea */
+  line-height: 1.4; /* Aumenta la altura de la línea para asegurar que el título ocupe dos líneas */
+  height: 2.8rem; /* Limita la altura del título para que siempre ocupe dos líneas */
+  word-wrap: break-word; /* Permite que las palabras largas se dividan */
+}
+
+/* Estilo para la galería de imágenes */
+.categoria-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Reduce el espacio entre las imágenes */
+  justify-content: center;
+  overflow: hidden; /* Evita que las imágenes se salgan */
+}
+
+.categoria-image {
+  width: 45%;
+  height: 140px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  object-fit: cover; /* Asegura que las imágenes no se distorsionen y mantengan su relación de aspecto */
+}
+
+/* Media Queries para Pantallas Pequeñas (menores a 768px) */
+
+/* En pantallas pequeñas, las categorías se apilan en una sola columna */
+@media (max-width: 768px) {
+  .categorias-container {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  .categoria-card {
+    width: 100%;
+  }
+
+  .categoria-title {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto en pantallas pequeñas */
+    height: auto; /* Deja que el título ocupe el espacio necesario en pantallas pequeñas */
+  }
+
+  .categoria-image {
+    width: 65%;
+     /* Imágenes ocupan todo el ancho en pantallas pequeñas */
+  }
+}
+/* Estilos para el modal */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50; /* Asegúrate de que el modal esté por encima de otros contenidos */
+}
+
+/* Fondo oscuro del modal */
+.bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo del botón de cerrar */
+.text-white {
+  color: white;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.transition {
+  transition: transform 0.3s ease;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* Estilos de la imagen */
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.hover\:scale-125:hover {
+  transform: scale(1.25);
+}
+
+.border-none {
+  border: none;
+}
+
+/* Asegurar que los botones se alineen verticalmente en el centro */
+.absolute {
+  position: absolute;
+}
+
+.left-6 {
+  left: 3.5rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.transform {
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+.card-container-home {
+  width: 100%;
+  min-height: 300px;
+  background-image: url('/assets/hh1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+   margin-top: 1rem;
+}
+
+/* Overlay negro */
+.card-container-home .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* oscuro pero permite ver la imagen */
+  z-index: 1;
+}
+
+/* Texto blanco sobre el overlay */
+.card-text {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  color: white;
+  box-sizing: border-box;
+}
+
+.card-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card-text {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-text {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+.card-trabajos {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card-trabajos-contenido {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card-trabajos h2 {
+   font-size: 2.5rem; 
+  font-weight: 400;    
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.card-trabajos p {
+  font-size: 1.25rem;   /* Equivale a text-xl */
+  font-weight: 350;     /* Light */
+  text-align: left;
+}
+
+
+
+
+.mensaje {
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+  z-index: 1000;
+}
+
+.mensaje.success {
+  background-color: #38a169; /* verde */
+  color: white;
+  border: 2px solid #2f855a;
+}
+
+.mensaje.error {
+  background-color: #e53e3e; /* rojo */
+  color: white;
+  border: 2px solid #9b2c2c;
+}

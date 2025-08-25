@@ -1,0 +1,8 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /productos/{document=**} {
+      allow read: if true;  // Permite lectura pública
+      allow write: if false; // No permite escritura pública
+    }
+  }
+}
