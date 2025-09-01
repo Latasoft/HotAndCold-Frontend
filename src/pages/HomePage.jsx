@@ -112,7 +112,7 @@ function HomePage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://hotandcold-backend.onrender.com/api/contact", {
+      const response = await fetch("https://hotandcold-backend-4wd0.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -29,7 +29,7 @@ const mostrarMensaje = (texto, tipo = "success") => {
     e.preventDefault();
 
     try {
-  await axios.post("https://hotandcold-backend.onrender.com/api/contact-footer", formData);
+  await axios.post("https://hotandcold-backend-4wd0.onrender.com/api/contact-footer", formData);
   mostrarMensaje("Mensaje enviado correctamente", "success");
   setFormData({
     nombre: "",
